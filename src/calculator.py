@@ -14,4 +14,4 @@ class Calculator:
         return a / b
 
     def add_gst(self, amount, rate):
-        return amount * (1 + rate / 100)
+        return round(amount * (1 + rate / 100), 2)
