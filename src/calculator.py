@@ -12,3 +12,6 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
+
+    def add_gst(self, amount, rate):
+        return amount * (1 + rate / 100)

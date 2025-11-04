@@ -35,5 +35,10 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.calculator.divide(5, 0)
 
+    def test_add_gst(self):
+        self.assertAlmostEqual(self.calculator.add_gst(100, 18), 118)
+        self.assertAlmostEqual(self.calculator.add_gst(250, 5), 262.5)
+        self.assertAlmostEqual(self.calculator.add_gst(0, 18), 0)
+
 if __name__ == '__main__':
     unittest.main()
